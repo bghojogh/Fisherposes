@@ -1,0 +1,66 @@
+The dataset includes these parameters which are obtained as output of function "load_dataset":
+
+%%% skeleton --> which_person, which_performance, which_action, which_frame, which_joint, which_dimension(x,y,z) --> determines the coordinate of joint --> 6-D matrix
+%%% number_of_samples --> which_person, which_action --> determines the number of performances of each person in each action --> 2-D matrix
+%%% action_length --> which_person, which_performance, which_action --> determines the number of frames --> 3-D matrix
+%%% base_joint_center --> hip joint
+%%% base_joint_left --> left shoulder
+%%% base_joint_right --> right shoulder
+
+===============================================
+
+joints_matrix:
+
+%%--> joints_vector: [x1, y1, z1, x2, y2, z2, ...] ---> 13 joints in UTKinect
+%%--> rows: training samples (frames) for LDA, columns: joint coordinates
+
+===============================================
+
+labels_and_subjects_matrix:
+
+%%--> rows: training samples (frames) for LDA, first column: labels (which state), second column: subjects (which person)
+
+===============================================
+
+state:
+
+%%%% guide: state(i,:) --> [which_person,which_performance,which_action,frame,state_index]
+
+===============================================
+
+skeleton:
+
+%%% skeleton --> not aligned skeleton --> which_person, which_performance, which_action, which_frame, which_joint, which_dimension(x,y,z) --> determines the coordinate of joint --> 6-D matrix
+
+important note: as the number of frames are not equal in different sequences, all sequences are zero-padded till the longest sequence in dataset. In order to find out that till what frame, the frames are original and from what frame, zero-padding starts, please use matrix "action_length"
+
+===============================================
+
+action_length:
+
+%%% action_length --> which_person, which_performance, which_action --> determines the number of frames --> 3-D matrix
+
+===============================================
+
+all_aligned_joints_gathered:
+
+%%%% all_aligned_joints_gathered --> 6-D matrix: which_person, which_performance, which_action, which_frame, which_joint, which_dimension(x,y,z)
+
+important note: as the number of frames are not equal in different sequences, all sequences are zero-padded till the longest sequence in dataset. In order to find out that till what frame, the frames are original and from what frame, zero-padding starts, please use matrix "action_length"
+
+===============================================
+
+hip_index: index of hip in skeleton
+left_shoulder: index of left shoulder in skeleton
+right_shoulder: index of right shoulder in skeleton
+
+These joints are used for skeleton alignment.
+
+===============================================
+
+All_estimated_poses_CrossSubject:
+
+%%%% All_estimated_poses_CrossSubject --> 4-D matrix: which_person, which_performance, which_action, which_frame --> determines the estimated labels (poses) of test frames (for every test person)
+
+important note: as the number of frames are not equal in different sequences, all sequences are zero-padded till the longest sequence in dataset. In order to find out that till what frame, the frames are original and from what frame, zero-padding starts, please use matrix "action_length"
+

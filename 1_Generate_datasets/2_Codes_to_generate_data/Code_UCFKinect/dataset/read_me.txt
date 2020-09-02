@@ -1,0 +1,1 @@
+copy the UCFKinect dataset (avaiable in the dataset folder of "Code_UCFKinect") and paste it here.
