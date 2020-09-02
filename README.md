@@ -7,4 +7,8 @@ Ghojogh, Benyamin, Hoda Mohammadzade, and Mozhgan Mokari. "Fisherposes for human
 
 and
 
+Mokari, Mozhgan, Hoda Mohammadzade, and Benyamin Ghojogh. "Recognizing involuntary actions from 3d skeleton data using body states." Scientia Iranica (2020).
+
+and
+
 Mokari, Mozhgan, Hoda Mohammadzade, and Benyamin Ghojogh. "Recognizing involuntary actions from 3d skeleton data using body states." arXiv preprint arXiv:1708.06227 (2017).
